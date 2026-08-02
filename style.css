@@ -1,0 +1,231 @@
+/* =========================================
+   GENERAL PAGE
+========================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f5f8;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background-color: #12355b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 10px;
+}
+
+header h2 {
+    color: white;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* =========================================
+   SECTIONS AND ARTICLE
+========================================= */
+
+section,
+article {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h2 {
+    color: #12355b;
+}
+
+h3 {
+    color: #333333;
+}
+
+
+/* =========================================
+   IMAGES
+========================================= */
+
+.college-logo {
+    width: 200px;
+    height: auto;
+}
+
+.campus-image {
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #12355b;
+    color: white;
+}
+
+tr:hover {
+    background-color: #e8f0f7;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+fieldset {
+    border: 2px solid #12355b;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+legend {
+    color: #12355b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    margin: 5px;
+}
+
+
+/* =========================================
+   SUBMIT AND RESET BUTTONS
+========================================= */
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #12355b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #222;
+}
+
+
+/* =========================================
+   MEDIA
+========================================= */
+
+audio,
+video,
+iframe {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: #12355b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer h3 {
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 700px) {
+
+    main {
+        width: 95%;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+}
