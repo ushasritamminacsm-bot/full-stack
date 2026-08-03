@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Name, Email and Password -->
+        Name:
+        <input type="text" name="name" required><br><br>
+
+        Email:
+        <input type="email" name="email" required><br><br>
+
+        Password:
+        <input type="password" name="password"><br><br>
+
+        <!-- Gender -->
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <!-- Hobbies -->
+        Hobbies:
+        <input type="checkbox" name="hobby"> Reading
+        <input type="checkbox" name="hobby"> Sports
+        <input type="checkbox" name="hobby"> Music
+        <br><br>
+
+        <!-- Branch -->
+        Branch:
+        <select name="branch">
+            <option>CSE</option>
+            <option>AIML</option>
+            <option>ECE</option>
+            <option>EEE</option>
+        </select>
+        <br><br>
+
+        <!-- Comments -->
+        Comments:
+        <br>
+        <textarea rows="4" cols="35"></textarea>
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
