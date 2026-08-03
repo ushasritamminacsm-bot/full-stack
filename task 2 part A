@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Canvas</title>
+</head>
+<body>
+
+<h1>HTML5 Canvas Graphics</h1>
+
+<canvas id="canvas" width="500" height="250"
+        style="border:1px solid black;"></canvas>
+
+<script>
+let c = document.getElementById("canvas");
+let x = c.getContext("2d");
+
+// Rectangle
+x.fillStyle = "royalblue";
+x.fillRect(30, 30, 100, 60);
+
+// Circle
+x.beginPath();
+x.arc(220, 60, 30, 0, 2 * Math.PI);
+x.stroke();
+
+// Line
+x.beginPath();
+x.moveTo(300, 30);
+x.lineTo(420, 100);
+x.stroke();
+
+// Name
+x.font = "22px Arial";
+x.fillText("Isha", 200, 180);
+</script>
+
+</body>
+</html>
