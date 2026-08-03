@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal - Tables and Images</title>
+</head>
+
+<body>
+
+    <!-- College Information -->
+    <h1>Anil Neerukonda Institute of Technology and Sciences</h1>
+
+    <p>
+        ANITS is located at Sangivalasa, Visakhapatnam.
+        It provides quality education and various facilities
+        for students.
+    </p>
+
+    <!-- College Logo -->
+    <h2>College Logo</h2>
+
+    <img src="anits-logo.png"
+         alt="ANITS College Logo"
+         width="200">
+
+    <!-- College Campus Image -->
+    <h2>College Campus</h2>
+
+    <img src="anits-campus.jpg"
+         alt="ANITS College Campus"
+         width="500">
+
+    <!-- Student Details Table -->
+    <h2>Student Details</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Branch</th>
+            <th>Email</th>
+        </tr>
+
+        <tr>
+            <td>01</td>
+            <td>Usha</td>
+            <td>CSE</td>
+            <td>usha@example.com</td>
+        </tr>
+
+        <tr>
+            <td>02</td>
+            <td>Rahul</td>
+            <td>ECE</td>
+            <td>rahul@example.com</td>
+        </tr>
+
+        <tr>
+            <td>03</td>
+            <td>Priya</td>
+            <td>AIML</td>
+            <td>priya@example.com</td>
+        </tr>
+
+        <tr>
+            <td>04</td>
+            <td>Kiran</td>
+            <td>EEE</td>
+            <td>kiran@example.com</td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
