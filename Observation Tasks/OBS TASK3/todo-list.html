@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive To-Do List</title>
 
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 30px;
+        }
+
+        input {
+            padding: 8px;
+            width: 220px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        li {
+            margin: 10px;
+            list-style: none;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My To-Do List</h1>
+
+    <!-- Text box and Add button -->
+    <input id="taskInput" type="text" placeholder="Enter a task">
+    <button id="addBtn">Add Task</button>
+
+    <!-- Empty list message -->
+    <p id="message">No tasks available.</p>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        // Select DOM elements
+        let input = document.getElementById("taskInput");
+        let addBtn = document.getElementById("addBtn");
+        let list = document.getElementById("taskList");
+        let message = document.getElementById("message");
+
+        // Add task
+        addBtn.addEventListener("click", function() {
+
+            if (input.value.trim() === "") return;
+
+            // Create task item
+            let task = document.createElement("li");
+            task.textContent = input.value;
+
+            // Complete button
+            let complete = document.createElement("button");
+            complete.textContent = "Complete";
+
+            complete.addEventListener("click", function() {
+                task.classList.toggle("completed");
+            });
+
+            // Delete button
+            let del = document.createElement("button");
+            del.textContent = "Delete";
+
+            del.addEventListener("click", function() {
+                task.remove();
+
+                if (list.children.length === 0)
+                    message.style.display = "block";
+            });
+
+            // Add buttons to task
+            task.appendChild(complete);
+            task.appendChild(del);
+
+            // Add task to list
+            list.appendChild(task);
+
+            message.style.display = "none";
+            input.value = "";
+        });
+    </script>
+
+</body>
+</html>
