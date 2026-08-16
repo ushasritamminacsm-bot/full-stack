@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Arrays and Functions</title>
+</head>
+
+<body>
+
+    <h1>Student Marks</h1>
+    <p id="result"></p>
+
+    <script>
+        // Array containing student marks
+        let marks = [80, 75, 90, 85, 70];
+
+        // Function to calculate total
+        function calculateTotal(arr) {
+            let total = 0;
+
+            for (let mark of arr) {
+                total += mark;
+            }
+
+            return total;
+        }
+
+        // Function to calculate average
+        function calculateAverage(arr) {
+            return calculateTotal(arr) / arr.length;
+        }
+
+        let total = calculateTotal(marks);
+        let average = calculateAverage(marks);
+
+        // Display result
+        document.getElementById("result").innerHTML =
+            "Marks: " + marks + "<br>" +
+            "Total Marks: " + total + "<br>" +
+            "Average Marks: " + average;
+    </script>
+
+</body>
+</html>
