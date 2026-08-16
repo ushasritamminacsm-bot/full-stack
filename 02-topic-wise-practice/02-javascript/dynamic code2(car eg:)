@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Car Webpage</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+            cursor: pointer;
+        }
+
+        #carInfo {
+            margin-top: 20px;
+        }
+
+        #carImage {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dark {
+            background: #222;
+            color: white;
+        }
+
+        .dark .box {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>Car Information</h1>
+
+        <button onclick="showCar('BMW')">BMW</button>
+        <button onclick="showCar('Audi')">Audi</button>
+        <button onclick="showCar('Tesla')">Tesla</button>
+
+        <div id="carInfo">
+            <h2>Select a Car</h2>
+            <p>Click a button to see the car.</p>
+        </div>
+
+        <button onclick="darkMode()">Dark Mode</button>
+
+    </div>
+
+    <script>
+
+        function showCar(car) {
+
+            let info = document.getElementById("carInfo");
+
+            if (car == "BMW") {
+
+                info.innerHTML =
+                    "<h2>BMW</h2>" +
+                    "<p>Luxury car with excellent performance.</p>" +
+                    "<p class='price'>Price: ₹45,00,000</p>" +
+                    "<img id='carImage' src='https://images.unsplash.com/photo-1555215695-3004980ad54e' alt='BMW Car'>";
+
+            }
+
+            else if (car == "Audi") {
+
+                info.innerHTML =
+                    "<h2>Audi</h2>" +
+                    "<p>Luxury car with modern design and technology.</p>" +
+                    "<p class='price'>Price: ₹50,00,000</p>" +
+                    "<img id='carImage' src='https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6' alt='Audi Car'>";
+
+            }
+
+            else if (car == "Tesla") {
+
+                info.innerHTML =
+                    "<h2>Tesla</h2>" +
+                    "<p>Electric car with advanced technology.</p>" +
+                    "<p class='price'>Price: ₹60,00,000</p>" +
+                    "<img id='carImage' src='https://images.unsplash.com/photo-1560958089-b8a1929cea89' alt='Tesla Car'>";
+
+            }
+        }
+
+        function darkMode() {
+
+            document.body.classList.toggle("dark");
+
+        }
+
+    </script>
+
+</body>
+</html>
