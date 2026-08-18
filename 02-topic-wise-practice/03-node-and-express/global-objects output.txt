@@ -1,0 +1,23 @@
+PS C:\Users\anits-csm\Desktop\csm 120 fs\.vscode> node all-global-objects.js
+Global: 42
+Hello World
+This is a warning
+Process ID: 6192
+Node Version: v24.18.0
+Buffer: <Buffer 75 73 68 61>
+Buffer Text: usha
+Directory: C:\Users\anits-csm\Desktop\csm 120 fs\.vscode
+File: C:\Users\anits-csm\Desktop\csm 120 fs\.vscode\all-global-objects.js
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+Count: 6
+Count: 7
+Count: 8
+Message after 9 seconds
+Count: 9
+Count: 10
+Count: 11
+Interval stopped
