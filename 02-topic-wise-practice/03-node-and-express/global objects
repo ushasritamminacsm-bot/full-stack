@@ -1,0 +1,41 @@
+// global
+global.x = 42;
+console.log("Global:", x);
+
+// console
+console.log("Hello World");
+console.warn("This is a warning");
+
+// process
+console.log("Process ID:", process.pid);
+console.log("Node Version:", process.version);
+
+// Buffer
+const buf = Buffer.from("usha");
+console.log("Buffer:", buf);
+console.log("Buffer Text:", buf.toString());
+
+// __dirname
+console.log("Directory:", __dirname);
+
+// __filename
+console.log("File:", __filename);
+
+// setTimeout
+setTimeout(() => {
+    console.log("Message after 9 seconds");
+}, 9000);
+
+// setInterval
+let count = 1;
+
+const timer = setInterval(() => {
+    console.log("Count:", count);
+
+    count++;
+
+    if (count > 11) {
+        clearInterval(timer);
+        console.log("Interval stopped");
+    }
+}, 1000);
