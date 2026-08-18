@@ -1,0 +1,19 @@
+Single Inheritance
+Aishu is a student.
+Aishu is studying.
+
+Multilevel Inheritance
+Animal is eating.
+Dog is barking.
+Puppy is playing.
+
+Hierarchical Inheritance
+Employee is working.
+Developer is coding.
+Employee is working.
+Designer is designing.
+
+Multiple Inheritance
+Aishu's Phone
+Music is playing.
+Photo is taken.
