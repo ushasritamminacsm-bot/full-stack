@@ -1,0 +1,110 @@
+// Single Inheritance
+console.log("Single Inheritance");
+
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    show() {
+        console.log(this.name + " is a student.");
+    }
+}
+
+class Student extends Person {
+    study() {
+        console.log(this.name + " is studying.");
+    }
+}
+
+let s = new Student("Aishu");
+s.show();
+s.study();
+
+
+// Multilevel Inheritance
+console.log("\nMultilevel Inheritance");
+
+class Animal {
+    eat() {
+        console.log("Animal is eating.");
+    }
+}
+
+class Dog extends Animal {
+    bark() {
+        console.log("Dog is barking.");
+    }
+}
+
+class Puppy extends Dog {
+    play() {
+        console.log("Puppy is playing.");
+    }
+}
+
+let p = new Puppy();
+p.eat();
+p.bark();
+p.play();
+
+
+// Hierarchical Inheritance
+console.log("\nHierarchical Inheritance");
+
+class Employee {
+    work() {
+        console.log("Employee is working.");
+    }
+}
+
+class Developer extends Employee {
+    code() {
+        console.log("Developer is coding.");
+    }
+}
+
+class Designer extends Employee {
+    design() {
+        console.log("Designer is designing.");
+    }
+}
+
+let d = new Developer();
+let x = new Designer();
+
+d.work();
+d.code();
+x.work();
+x.design();
+
+
+// Multiple Inheritance using Mixins
+console.log("\nMultiple Inheritance");
+
+const Music = {
+    play() {
+        console.log("Music is playing.");
+    }
+};
+
+const Camera = {
+    photo() {
+        console.log("Photo is taken.");
+    }
+};
+
+class Phone {
+    constructor(name) {
+        this.name = name;
+    }
+    show() {
+        console.log(this.name);
+    }
+}
+
+Object.assign(Phone.prototype, Music, Camera);
+
+let phone = new Phone("Aishu's Phone");
+phone.show();
+phone.play();
+phone.photo();
