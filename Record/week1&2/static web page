@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Static Webpage</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>StaticWeb</h1>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#articles">Articles</a> |
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Semantic HTML Webpage</h2>
+        <p>
+            This webpage is created using simple HTML
+            without CSS.
+        </p>
+        <a href="#articles">Read Articles ↓</a>
+    </section>
+
+    <hr>
+
+    <!-- Main Content -->
+    <main id="articles">
+
+        <!-- Article 1 -->
+        <article>
+            <h2>1. Core Structural Tags</h2>
+            <p>Published: July 7, 2026</p>
+
+            <p>
+                HTML provides semantic tags like
+                main, article and section to organize
+                webpage content.
+            </p>
+
+            <p>
+                These tags make the webpage easy to
+                understand and accessible.
+            </p>
+        </article>
+
+        <hr>
+
+        <!-- Article 2 -->
+        <article>
+            <h2>2. User Inquiry Form</h2>
+            <p>Published: July 5, 2026</p>
+
+            <form id="contact">
+
+                <fieldset>
+                    <legend>User Inquiry Form</legend>
+
+                    <label>Name:</label>
+                    <input type="text" required>
+                    <br><br>
+
+                    <label>Email:</label>
+                    <input type="email" required>
+                    <br><br>
+
+                    <label>Topic:</label>
+                    <select>
+                        <option>General Feedback</option>
+                        <option>Technical</option>
+                        <option>Academics</option>
+                    </select>
+                    <br><br>
+
+                    <label>Message:</label><br>
+                    <textarea rows="5" cols="30"></textarea>
+                    <br><br>
+
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+
+                </fieldset>
+
+            </form>
+        </article>
+
+    </main>
+
+    <hr>
+
+    <!-- Sidebar -->
+    <aside id="about">
+        <h3>About</h3>
+
+        <p>
+            Static webpages display information
+            without a database.
+        </p>
+
+        <h4>Benefits</h4>
+
+        <ul>
+            <li>Fast loading</li>
+            <li>Low memory usage</li>
+            <li>Easy to understand</li>
+        </ul>
+
+        <h4>Components</h4>
+
+        <ol>
+            <li>HTML Document</li>
+            <li>Semantic Tags</li>
+            <li>Form Elements</li>
+        </ol>
+    </aside>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 StaticWeb. Created using HTML.
+        </p>
+    </footer>
+
+</body>
+</html>
