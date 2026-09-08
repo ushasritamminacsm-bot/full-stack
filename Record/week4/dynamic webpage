@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic JavaScript Web Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        .dark {
+            background: #222;
+            color: white;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .dark .box {
+            background: #333;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1 id="greeting">Welcome!</h1>
+
+        <button onclick="darkMode()">Dark Mode</button>
+
+        <h2>Task Tracker</h2>
+
+        <input id="task" placeholder="Enter task">
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="list"></ul>
+
+    </div>
+
+    <script>
+
+        // Dynamic greeting
+        let hour = new Date().getHours();
+
+        if (hour < 12)
+            document.getElementById("greeting").innerHTML = "Good Morning!";
+        else if (hour < 18)
+            document.getElementById("greeting").innerHTML = "Good Afternoon!";
+        else
+            document.getElementById("greeting").innerHTML = "Good Evening!";
+
+
+        // Dark mode
+        function darkMode() {
+            document.body.classList.toggle("dark");
+        }
+
+
+        // Add task
+        function addTask() {
+
+            let task = document.getElementById("task").value;
+
+            if (task == "") return;
+
+            let li = document.createElement("li");
+
+            li.innerHTML = task +
+                ' <button onclick="this.parentElement.remove()">Delete</button>';
+
+            document.getElementById("list").appendChild(li);
+
+            document.getElementById("task").value = "";
+        }
+
+    </script>
+
+</body>
+</html>
