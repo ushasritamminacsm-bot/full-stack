@@ -1,0 +1,44 @@
+const fs = require("fs");
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter filename: ", (filename) => {
+
+    if (filename.trim() === "") {
+        console.log("Error: Filename cannot be empty.");
+        rl.close();
+        return;
+    }
+
+    rl.question("Enter content: ", (content) => {
+
+        if (content.trim() === "") {
+            console.log("Error: Content cannot be empty.");
+            rl.close();
+            return;
+        }
+
+        // Create and write the file
+        fs.writeFileSync(filename, content);
+        console.log("\nFile created and written successfully.");
+
+        // Read the file
+        let data = fs.readFileSync(filename, "utf8");
+        console.log("Original content:", data);
+
+        // Append additional content
+        fs.appendFileSync(filename, "\nThis is additional content.");
+
+        // Read final content
+        data = fs.readFileSync(filename, "utf8");
+
+        console.log("\nFinal content:");
+        console.log(data);
+
+        rl.close();
+    });
+});
