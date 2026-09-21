@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Demonstration - Ushasri</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef3ff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .card {
+            width: 450px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px gray;
+        }
+
+        h1 {
+            color: royalblue;
+        }
+
+        #name {
+            color: #333;
+        }
+
+        #info {
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: royalblue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1 id="title">My Profile</h1>
+
+        <h2 id="name">Ushasri</h2>
+
+        <p id="info">
+            Click the button to view my updated profile.
+        </p>
+
+        <p id="course">Course: Computer Science</p>
+
+        <button id="updateBtn">Update Profile</button>
+
+    </div>
+
+    <script>
+
+        function updateProfile() {
+
+            // Change content
+            document.getElementById("title").textContent =
+                "Welcome to My Profile";
+
+            document.getElementById("info").textContent =
+                "Hello! I am Ushasri. This profile is updated using DOM.";
+
+            document.getElementById("course").textContent =
+                "Course: Computer Science and Engineering";
+
+            // Change style
+            document.getElementById("name").style.color =
+                "royalblue";
+
+            document.getElementById("info").style.fontSize =
+                "18px";
+
+            // Change button text
+            document.getElementById("updateBtn").textContent =
+                "Profile Updated";
+        }
+
+        // Event listener
+        document.getElementById("updateBtn")
+            .addEventListener("click", updateProfile);
+
+    </script>
+
+</body>
+</html>
