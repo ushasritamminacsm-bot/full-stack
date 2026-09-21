@@ -1,0 +1,9 @@
+async function main() {
+    const { default: chalk } = await import("chalk");
+
+    console.log(chalk.blue("Hello from NPM!"));
+    console.log(chalk.green("Chalk package installed successfully."));
+    console.log(chalk.yellow("This is an external Node.js package."));
+}
+
+main();
