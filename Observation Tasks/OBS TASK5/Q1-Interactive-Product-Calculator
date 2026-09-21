@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Product Calculator</h1>
+
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="quantity" placeholder="Quantity" min="1">
+    <input type="number" id="price" placeholder="Price" min="0">
+
+    <button id="calculateBtn">Calculate Total</button>
+
+    <h2 id="result">Total: ₹0</h2>
+    <p id="error"></p>
+
+    <script>
+        function calculateTotal() {
+            let name = document.getElementById("productName").value;
+            let quantity = Number(document.getElementById("quantity").value);
+            let price = Number(document.getElementById("price").value);
+
+            if (name === "" || quantity <= 0 || price < 0) {
+                document.getElementById("error").textContent =
+                    "Please enter valid product details.";
+                return;
+            }
+
+            let total = quantity * price;
+
+            document.getElementById("result").textContent =
+                "Total: ₹" + total;
+
+            document.getElementById("error").textContent = "";
+        }
+
+        document.getElementById("calculateBtn")
+            .addEventListener("click", calculateTotal);
+
+        document.getElementById("quantity")
+            .addEventListener("input", calculateTotal);
+
+        document.getElementById("price")
+            .addEventListener("input", calculateTotal);
+    </script>
+
+</body>
+</html>
