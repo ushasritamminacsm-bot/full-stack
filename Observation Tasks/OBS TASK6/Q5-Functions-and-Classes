@@ -1,0 +1,39 @@
+// Function example
+function greet(name) {
+    return "Hello " + name;
+}
+
+console.log(greet("Ushasri"));
+
+// Class example
+class Student {
+    constructor(name, rollNo, department) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.department = department;
+    }
+
+    display() {
+        console.log(
+            this.name + " - " +
+            this.rollNo + " - " +
+            this.department
+        );
+    }
+}
+
+// Creating multiple objects
+const student1 = new Student(
+    "Ushasri",
+    "A24126552120",
+    "CSE"
+);
+
+const student2 = new Student(
+    "Ravi",
+    "A24126552121",
+    "CSE"
+);
+
+student1.display();
+student2.display();
