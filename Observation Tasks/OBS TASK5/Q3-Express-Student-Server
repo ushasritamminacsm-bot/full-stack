@@ -1,0 +1,28 @@
+const express = require("express");
+
+const app = express();
+const PORT = 3000;
+
+const students = [
+    "Ravi Kumar",
+    "Anita Sharma",
+    "Rahul Verma",
+    "Priya Singh",
+    "Kiran Reddy"
+];
+
+app.get("/", (req, res) => {
+    res.send("<h1>Student Information Server</h1>");
+});
+
+app.get("/students", (req, res) => {
+    res.json(students);
+});
+
+app.get("/about", (req, res) => {
+    res.send("<h1>About</h1><p>This is an Express.js Student Server.</p>");
+});
+
+app.listen(PORT, () => {
+    console.log("Server running at http://localhost:3000");
+});
