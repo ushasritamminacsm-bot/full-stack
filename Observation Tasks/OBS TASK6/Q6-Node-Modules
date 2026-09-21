@@ -1,0 +1,18 @@
+const os = require("os");
+const path = require("path");
+const fs = require("fs");
+
+// OS module
+console.log("Operating System:", os.platform());
+console.log("CPU Cores:", os.cpus().length);
+
+// Path module
+const filePath = path.join(__dirname, "sample.txt");
+console.log("File Path:", filePath);
+
+// File System module
+fs.writeFileSync(filePath, "Hello from Node.js modules!");
+console.log("File created successfully.");
+
+const data = fs.readFileSync(filePath, "utf8");
+console.log("File Content:", data);
